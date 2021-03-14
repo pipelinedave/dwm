@@ -7,10 +7,10 @@
 /* appearance */
 static unsigned int borderpx  = 1;        /* border pixel of windows */
 static unsigned int snap      = 32;       /* snap pixel */
-static unsigned int gappih    = 15;       /* horiz inner gap between windows */
+static unsigned int gappih    = 10;       /* horiz inner gap between windows */
 static unsigned int gappiv    = 10;       /* vert inner gap between windows */
 static unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
-static unsigned int gappov    = 20;       /* vert outer gap between windows and screen edge */
+static unsigned int gappov    = 10;       /* vert outer gap between windows and screen edge */
 static int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static int showbar            = 1;        /* 0 means no bar */
@@ -161,9 +161,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_q,		spawn,		SHCMD("sysact") },
 	// { MODKEY,			XK_w,		spawn,		SHCMD("$BROWSER") },
 	{ MODKEY|ShiftMask,		XK_w,		spawn,		SHCMD(TERMINAL " -e sudo nmtui") },
-	{ MODKEY,			XK_e,		spawn,		SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook") },
-	{ MODKEY|ShiftMask,		XK_e,		spawn,		SHCMD(TERMINAL " -e abook -C ~/.config/abook/abookrc --datafile ~/.config/abook/addressbook") },
-	{ MODKEY,			XK_r,		spawn,		SHCMD(TERMINAL " -e lf") },
+	// { MODKEY,			XK_e,		spawn,		SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook") },
+	// { MODKEY|ShiftMask,		XK_e,		spawn,		SHCMD(TERMINAL " -e abook -C ~/.config/abook/abookrc --datafile ~/.config/abook/addressbook") },
+	{ MODKEY,			XK_e,		spawn,		SHCMD(TERMINAL " -e lf") },
 	{ MODKEY|ShiftMask,		XK_r,		spawn,		SHCMD(TERMINAL " -e htop") },
 	{ MODKEY,			XK_t,		setlayout,	{.v = &layouts[0]} }, /* tile */
 	{ MODKEY|ShiftMask,		XK_t,		setlayout,	{.v = &layouts[1]} }, /* bstack */
@@ -329,4 +329,3 @@ static Button buttons[] = {
 	{ ClkTagBar,		0,		Button5,	shiftview,	{.i = 1} },
 	{ ClkRootWin,		0,		Button2,	togglebar,	{0} },
 };
-
