@@ -14,7 +14,7 @@ static unsigned int gappov    = 10;       /* vert outer gap between windows and 
 static int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static int showbar            = 1;        /* 0 means no bar */
-static int topbar             = 1;        /* 0 means bottom bar */
+static int topbar             = 0;        /* 0 means bottom bar */
 static char *fonts[]          = { "Noto Sans Mono:size=12", "Noto Sans:size=14:antialias=true:autohint=true"  };
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#333333";
